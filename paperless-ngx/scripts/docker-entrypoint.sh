@@ -22,16 +22,17 @@ export DEFAULT_PASSWORD=$(jq --raw-output ".default_superuser.password" $CONFIG_
 export PAPERLESS_TIME_ZONE=$(jq --raw-output ".timezone.timezone" $CONFIG_PATH)
 
 # Change Paperless directories so that we can access the files
-export PAPERLESS_CONSUMPTION_DIR=/share/paperless/consume
-export PAPERLESS_DATA_DIR=/share/paperless/data
-export PAPERLESS_MEDIA_ROOT=/share/paperless/media
+export PAPERLESS_CONSUMPTION_DIR=$(jq --raw-output ".directories.consumption" $CONFIG_PATH)
+export PAPERLESS_DATA_DIR=$(jq --raw-output ".directories.data" $CONFIG_PATH)
+export PAPERLESS_MEDIA_ROOT=$(jq --raw-output ".directories.media" $CONFIG_PATH)
 
 mkdir -p $PAPERLESS_CONSUMPTION_DIR
 mkdir -p $PAPERLESS_DATA_DIR
 mkdir -p $PAPERLESS_MEDIA_ROOT
 
-sudo chmod -R 777 /share/paperless
-
+sudo chmod -R 777 $PAPERLESS_CONSUMPTION_DIR
+sudo chmod -R 777 $PAPERLESS_DATA_DIR
+sudo chmod -R 777 $PAPERLESS_MEDIA_ROOT
 
 # Source: https://github.com/sameersbn/docker-gitlab/
 map_uidgid() {

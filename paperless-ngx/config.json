@@ -15,9 +15,14 @@
   "ports_description": {
     "8000/tcp": "Web interface"
   },
-  "map": ["share:rw"],
+  "map": ["share:rw", "media:rw"],
   "options": {
     "url": null,
+    "directories": {
+      "consumption": "/share/paperless/consume",
+      "data": "/share/paperless/data",
+      "media": "/share/paperless/media"
+    },
     "filename": {
       "format": "{created_year}/{correspondent}/{title}"
     },
@@ -35,6 +40,11 @@
   },
   "schema": {
     "url": "str",
+    "directories": {
+      "consumption": "str",
+      "data": "str",
+      "media": "str"
+    },
     "filename": {
       "format": "str"
     },
