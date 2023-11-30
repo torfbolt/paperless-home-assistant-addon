@@ -34,6 +34,9 @@
       "email": null,
       "password": null
     },
+    "consumer": {
+      "polling": 0
+    },
     "timezone": {
       "timezone": "UTC"
     }
@@ -55,6 +58,9 @@
       "username": "str",
       "email": "email",
       "password": "password"
+    },
+    "consumer": {
+      "polling": "int"
     },
     "timezone": {
       "timezone": "str"
