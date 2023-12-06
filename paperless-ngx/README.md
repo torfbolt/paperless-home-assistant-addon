@@ -1,5 +1,6 @@
 # Paperless-ng Home Assistant Addon
-### Paperless Version 1.17.4
+
+### Paperless Version 2.0.1
 
 ## About
 
@@ -29,6 +30,7 @@ The documentation for this addon can be found [here](DOCS.md)
 ## Integrate into Home Assistant
 
 In Home Assistant Information from paperless can be accessed trought a REST-Sensor:
+
 ```
 - platform: rest
   unique_id: 5dade7bc-ddb7-442e-bb17-0d379dbf01fb
@@ -43,6 +45,7 @@ In Home Assistant Information from paperless can be accessed trought a REST-Sens
 ```
 
 In your secrets file you'll have to specify:
+
 ```
 paperless_auth_header: Token <django-token>
 ```
