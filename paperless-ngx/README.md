@@ -18,6 +18,7 @@ comparison to installing any other Home Assistant add-on.
 1. Install this add-on.
 1. Set the configuration.
 1. Click the `Save` button to store your configuration.
+1. Optionally put additional configuration options into a paperless.conf file in your Home Assistant config directory.
 1. Start the add-on.
 1. Check the logs of the add-on to see if everything went well.
 

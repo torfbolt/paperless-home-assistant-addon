@@ -17,6 +17,8 @@ RUN mv /sbin/docker-entrypoint.sh /sbin/docker-entrypoint.sh.orig
 COPY scripts/docker-entrypoint.sh /sbin/docker-entrypoint.sh
 RUN chmod 755 /sbin/docker-entrypoint.sh
 
+ENV PAPERLESS_CONFIGURATION_PATH="/config/paperless.conf"
+
 #VOLUME ["/usr/src/paperless/data", "/usr/src/paperless/media", "/usr/src/paperless/consume", "/usr/src/paperless/export"]
 
 #EXPOSE 8000
