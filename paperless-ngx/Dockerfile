@@ -1,4 +1,4 @@
-FROM ghcr.io/paperless-ngx/paperless-ngx:2.0.1
+FROM ghcr.io/paperless-ngx/paperless-ngx:2.1.3
 
 #### Redis Setup
 RUN apt-get update \
