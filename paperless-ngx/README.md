@@ -1,6 +1,6 @@
 # Paperless-ng Home Assistant Addon
 
-### Paperless Version 2.2.1
+### Paperless Version 2.6.2
 
 ## About
 
